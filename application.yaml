@@ -1,0 +1,7 @@
+token:
+  expiration: 84600000 #10 days
+  secret: uadfiluiafh8r4f4hlfa9asdf
+
+login:
+  url:
+    path: /users/login
