@@ -3,26 +3,26 @@ server:
 #  servlet:
 #    context-path: /users-ws
 
-spring:
-  application:
-    name: users-ws
-  devtools:
-    restart:
-      enabled: true
-  jpa:
-    properties:
-      hibernate:
-        format_sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create
-    show-sql: true
-    datasource:
-      platform: org.hibernate.dialect.PostgreSQLDialect
-      url: jdbc:postgresql://localhost:5432/photo_app
-      username: postgres
-      password: postgres
-      driverClassName: org.postgresql.Driver
+#spring:
+#  application:
+#    name: users-ws
+#  devtools:
+#    restart:
+#      enabled: true
+#  jpa:
+#    properties:
+#      hibernate:
+#        format_sql: true
+#    generate-ddl: true
+#    hibernate:
+#      ddl-auto: create
+#    show-sql: true
+#    datasource:
+#      platform: org.hibernate.dialect.PostgreSQLDialect
+#      url: jdbc:postgresql://localhost:5432/photo_app
+#      username: postgres
+#      password: postgres
+#      driverClassName: org.postgresql.Driver
 #  h2:
 #    console:
 #      enabled: true
@@ -34,6 +34,28 @@ spring:
 #    username: sa
 #    password:
 #    driverClassName: org.h2.Driver
+
+spring:
+  application:
+    name: users-ws
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/photo_app
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
 
 eureka:
   client:
