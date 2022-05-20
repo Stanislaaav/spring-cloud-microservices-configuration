@@ -19,7 +19,7 @@ spring:
     show-sql: true
     datasource:
       platform: org.hibernate.dialect.PostgreSQLDialect
-      url: "jdbc:postgresql://localhost:5432/photo_app"
+      url: jdbc:postgresql://localhost:5432/photo_app
       username: postgres
       password: postgres
       driverClassName: org.postgresql.Driver
