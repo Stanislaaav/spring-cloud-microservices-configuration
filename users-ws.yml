@@ -10,8 +10,13 @@ spring:
     restart:
       enabled: true
   jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
     hibernate:
       ddl-auto: create
+    show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     datasource:
       url: "jdbc:postgresql://localhost:5432/photo_app"
