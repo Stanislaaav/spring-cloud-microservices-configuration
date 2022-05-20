@@ -17,8 +17,8 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     datasource:
+      platform: org.hibernate.dialect.PostgreSQLDialect
       url: "jdbc:postgresql://localhost:5432/photo_app"
       username: postgres
       password: postgres
