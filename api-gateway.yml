@@ -43,20 +43,15 @@ spring:
             - RemoveRequestHeader=Cookie
             - RewritePath=/users-ws/(?<segment>.*), /$\{segment}
             - AuthorizationHeaderFilter
-#  rabbitmq:
-#    host: localhost
-#    port: 15672
-#    username: user
-#    password: password
-#      discovery:
-#        locator:
-#          enabled: true
-#          lower-case-service-id: true
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka
 
-token:
-  secret: uadfiluiafh8r4f4hlfa9asdf
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,health,routes,httptrace
+
