@@ -37,7 +37,13 @@ api:
     path:
       gateway:
         actuator: /actuator/*
-      h2console: /users-ws/h2/*
-      registration: /users-ws/users
-      login: /users-ws/users/login
+      registration: /users-ws/users/*
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings
+
 
