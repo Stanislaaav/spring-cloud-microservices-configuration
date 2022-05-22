@@ -1,7 +1,11 @@
 token:
   expiration: 84600000 #10 days
-  secret: uadfiluiafh8r4f4hlfa9asdf11111
+  secret: uadfiluiafh8r4f4hlfa9asdf1
 
-login:
-  url:
-    path: /users/login
+spring:
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: user
+    password: password
+

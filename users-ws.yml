@@ -1,0 +1,67 @@
+server:
+  port: ${PORT:0}
+#  servlet:
+#    context-path: /users-ws
+
+spring:
+  application:
+    name: users-ws
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/photo_app
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+#      ddl-auto: create
+#      ddl-auto: update
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
+#      settings:
+#        web-allow-others: true
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+#    password:
+#    driverClassName: org.h2.Driver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+login:
+  url:
+    path: /users/login
+
+api:
+  url:
+    path:
+      gateway:
+        actuator: /actuator/*
+      registration: /users-ws/users/*
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings
+
+albums:
+  url: http://ALBUMS-WS/users/%s/albulms
+
