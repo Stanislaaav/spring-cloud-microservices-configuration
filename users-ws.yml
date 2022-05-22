@@ -47,6 +47,13 @@ eureka:
 login:
   url:
     path: /users/login
+  level:
+    com:
+      siliev:
+        photoapp:
+          api:
+            users:
+              AlbumsServiceClient: DEBUG
 
 api:
   url:
@@ -64,4 +71,7 @@ management:
 
 albums:
   url: http://ALBUMS-WS/users/%s/albums
+
+
+
 
