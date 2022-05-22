@@ -63,5 +63,5 @@ management:
         include: mappings
 
 albums:
-  url: http://ALBUMS-WS/users/%s/albulms
+  url: http://ALBUMS-WS/users/%s/albums
 
