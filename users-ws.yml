@@ -77,11 +77,11 @@ management:
 albums:
   url: http://ALBUMS-WS/users/%s/albums
 
-#resilience4j:
-#  circuitbreaker:
-#    instances:
-#      albumsWs:
-#        failureRateThreshold: 50
+resilience4j:
+  circuitbreaker:
+    instances:
+      albumsWs:
+        failureRateThreshold: 50
 #        automaticTransitionFromOpenToHalfOpenEnabled: true
 #        waitDurationInOpenState: 1000ms
 #        slidingWindowType: TIME_BASED
