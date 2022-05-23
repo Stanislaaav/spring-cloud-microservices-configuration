@@ -85,9 +85,9 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 1000ms
 #        slidingWindowType: TIME_BASED
-        slidingWindowSize: 2
-        minimumNumberOfCalls: 1
-        eventConsumerBufferSize: 10
+#        slidingWindowSize: 2
+#        minimumNumberOfCalls: 1
+#        eventConsumerBufferSize: 10
 
 
 
