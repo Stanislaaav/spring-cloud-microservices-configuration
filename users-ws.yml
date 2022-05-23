@@ -62,13 +62,17 @@ api:
         actuator: /actuator/*
       registration: /users-ws/users/*
 
-
 management:
   endpoints:
     web:
       exposure:
-        include: mappings
-
+        include: "*"
+    health:
+      enabled: true
+      show-details: always
+  health:
+    circuitbreakers:
+      enable: true
 albums:
   url: http://ALBUMS-WS/users/%s/albums
 
