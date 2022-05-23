@@ -82,12 +82,12 @@ resilience4j:
     instances:
       albums-ws:
         failureRateThreshold: 50
-#        automaticTransitionFromOpenToHalfOpenEnabled: true
-#        waitDurationInOpenState: 1000ms
-#        slidingWindowType: TIME_BASED
-#        slidingWindowSize: 2
-#        minimumNumberOfCalls: 1
-#        eventConsumerBufferSize: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 1000ms
+        slidingWindowType: TIME_BASED
+        slidingWindowSize: 2
+        minimumNumberOfCalls: 1
+        eventConsumerBufferSize: 10
 
 
 
