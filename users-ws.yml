@@ -84,7 +84,7 @@ resilience4j:
         failureRateThreshold: 50
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 1000ms
-        slidingWindowType: TIME_BASED
+#        slidingWindowType: TIME_BASED
         slidingWindowSize: 2
         minimumNumberOfCalls: 1
         eventConsumerBufferSize: 10
