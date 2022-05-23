@@ -77,17 +77,16 @@ management:
 albums:
   url: http://ALBUMS-WS/users/%s/albums
 
-resilience4j:
-  circuitbreaker:
-    instances:
-      albums-ws:
-        failureRateThreshold: 50
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        waitDurationInOpenState: 1000ms
-        slidingWindowType: TIME_BASED
-        slidingWindowSize: 2
-        minimumNumberOfCalls: 1
-        eventConsumerBufferSize: 10
+resilience4j.circuitbreaker:
+  instances:
+    albums-ws:
+      failureRateThreshold: 50
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 1000ms
+      slidingWindowType: TIME_BASED
+      slidingWindowSize: 2
+      minimumNumberOfCalls: 1
+      eventConsumerBufferSize: 10
 
 
 
