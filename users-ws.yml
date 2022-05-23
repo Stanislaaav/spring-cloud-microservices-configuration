@@ -59,8 +59,8 @@ api:
   url:
     path:
       gateway:
-        actuator: /actuator/*
-      registration: /users-ws/users/*
+        actuator: /actuator/**
+      registration: /users-ws/users/**
 
 management:
   endpoints:
@@ -88,6 +88,16 @@ resilience4j:
         slidingWindowSize: 2
         minimumNumberOfCalls: 1
         eventConsumerBufferSize: 10
+    circuitBreakerAspectOrder: 1
+  retry:
+    retryAspectOrder: 2
+    instance:
+      albumsWs:
+        maxAtempts: 3
+        waitDuration: 2s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 5
+
 
 
 
